@@ -2,8 +2,6 @@
 
 This is a simple React Todo app created with [Vite](https://vitejs.dev/). The app allows you to create, remove, and manage your todo list. It utilizes local storage to persist your todos, ensuring they are available even after refreshing the page.
 
-![Todo App Screenshot](todo-app-screenshot.png)
-
 ## Features
 
 - **Create Todo:** Add new tasks to your todo list.
