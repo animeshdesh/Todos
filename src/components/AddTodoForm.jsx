@@ -11,8 +11,10 @@ const AddTodoForm = ({ handelAddTodo }) => {
 
   const handelSubmit = (evt) => {
     evt.preventDefault();
-    handelAddTodo(text);
-    setText("");
+    if (text.length < 0) {
+      handelAddTodo(text);
+      setText("");
+    }
   };
   return (
     <div>

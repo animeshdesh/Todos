@@ -36,8 +36,7 @@ const Todo = () => {
   const todayDate = getTodaysDate();
 
   const deletemessages = [
-    "hope u completed the task and not skipped it u lazy ass",
-    "hope u r not procrastinating u dumb human",
+    "hope u completed the task and not skipped it",
     "deleted it? really? u r that smart? unreal",
     "wowowow i cant believe u completed it",
     "Hope you're not procrastinating!",
@@ -45,7 +44,7 @@ const Todo = () => {
   ];
   const addingmessages = [
     "look at u adding task",
-    "Make sure u complete them or i will tell ur momma",
+    "Make sure u complete them or i will tell ur teacher",
     "adding task uff, which self help book made u do this?",
     "taking life control back? lets see how long it lasts",
     "u better finish this task & not just look at it everyday",
@@ -187,7 +186,7 @@ const Todo = () => {
           </Box>
           <Box
             sx={{
-              marginTop: "5rem",
+              position: "fixed",
               bottom: 10,
               left: 50,
               right: 0,

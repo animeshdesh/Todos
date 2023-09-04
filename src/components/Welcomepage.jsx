@@ -57,6 +57,7 @@ const Welcomepage = () => {
         </Box>
         <Box
           sx={{
+            position: "fixed",
             bottom: 10,
             left: 50,
             right: 0,
