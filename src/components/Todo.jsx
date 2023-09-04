@@ -21,6 +21,11 @@ function getTodaysDate() {
 
 const Todo = () => {
   const [snackbarOpen, setSnackbarOpen] = useState(false);
+  const [name, setName] = useState(() => {
+    const gettingName = localStorage.getItem("name");
+    if (!gettingName) return [];
+    return gettingName;
+  });
   const [snackbarMessage, setSnackbarMessage] = useState("");
   const [todos, setTodos] = useState(() => {
     const storageData = JSON.parse(localStorage.getItem("todos"));
@@ -29,7 +34,6 @@ const Todo = () => {
   });
 
   const todayDate = getTodaysDate();
-  let name = localStorage.getItem("name");
 
   const deletemessages = [
     "hope u completed the task and not skip it u lazy ass",
@@ -173,7 +177,7 @@ const Todo = () => {
           <Box sx={{ display: "flex", justifyContent: "center" }}>
             <Snackbar
               open={snackbarOpen}
-              autoHideDuration={3000} // Adjust the duration as needed
+              autoHideDuration={6000} // Adjust the duration as needed
               onClose={() => setSnackbarOpen(false)}
               message={snackbarMessage}
             />
