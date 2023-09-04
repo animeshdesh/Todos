@@ -30,6 +30,23 @@ const Todo = () => {
 
   const todayDate = getTodaysDate();
   let name = localStorage.getItem("name");
+
+  const deletemessages = [
+    "hope u completed the task and not skip it u lazy ass",
+    "hope u r not procrastinating u dumb human",
+    "deleted it? really? u r that smart? unreal",
+    "wowowow i cant believe u completed it",
+    "Hope you're not procrastinating!",
+    "Is that task still playing hide and seek?",
+  ];
+  const addingmessages = [
+    "look at u adding task to you?",
+    "Make sure u complete them or i will tell u momma",
+    "adding task uff, which self help book made u do this?",
+    "taking life control back? lets see how long it last",
+    "u better finish this task not look at it everyday",
+    "your present self have to complete the task not yout future",
+  ];
   const openSnackbar = (message) => {
     setSnackbarMessage(message);
 
@@ -37,7 +54,9 @@ const Todo = () => {
   };
 
   const handelRemove = (id) => {
-    openSnackbar("Deleted Todo");
+    const randomIndex = Math.floor(Math.random() * deletemessages.length);
+    const randomMessage = deletemessages[randomIndex];
+    openSnackbar(randomMessage);
     setTodos((prevtodos) => {
       return prevtodos.filter((t) => t.id !== id);
     });
@@ -57,7 +76,9 @@ const Todo = () => {
   };
 
   const handelAddTodo = (text) => {
-    openSnackbar("Added todo successfully");
+    const randomIndex = Math.floor(Math.random() * addingmessages.length);
+    const randomMessage = addingmessages[randomIndex];
+    openSnackbar(randomMessage);
     setTodos((prevtodos) => {
       return [
         ...prevtodos,
@@ -69,7 +90,7 @@ const Todo = () => {
   const handelDeleteAllSelected = () => {
     setTodos((prevtodo) => {
       const updatedTodos = prevtodo.filter((todo) => !todo.checked);
-      openSnackbar("Selected todos deleted successfully");
+      openSnackbar("Selected todos deleted proud of u ❤️");
       return updatedTodos;
     });
   };
@@ -152,7 +173,7 @@ const Todo = () => {
           <Box sx={{ display: "flex", justifyContent: "center" }}>
             <Snackbar
               open={snackbarOpen}
-              autoHideDuration={5000} // Adjust the duration as needed
+              autoHideDuration={3000} // Adjust the duration as needed
               onClose={() => setSnackbarOpen(false)}
               message={snackbarMessage}
             />

@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import { IconButton, InputAdornment, TextField } from "@mui/material";
+import { IconButton, InputAdornment, TextField, Button } from "@mui/material";
 import AddBoxIcon from "@mui/icons-material/AddBox";
 import { useState } from "react";
 
@@ -34,6 +34,14 @@ const AddTodoForm = ({ handelAddTodo }) => {
             ),
           }}
         />
+        <Button
+          variant="outlined"
+          color="success"
+          sx={{ marginTop: "25px", width: "100%" }}
+          onClick={handelSubmit}
+        >
+          Add todo
+        </Button>
       </form>
     </div>
   );
