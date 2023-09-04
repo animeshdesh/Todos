@@ -29,7 +29,11 @@ const SingleTodo = ({ todo, labelId, handelRemove, handelChecked }) => {
             onChange={handelChecked}
           />
         </ListItemIcon>
-        <ListItemText id={labelId} primary={todo.name} />
+        <ListItemText
+          id={labelId}
+          primary={todo.name}
+          style={{ fontSize: "16px", fontWeight: "bold" }}
+        />
       </ListItemButton>
     </ListItem>
   );
