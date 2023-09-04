@@ -92,9 +92,12 @@ const Todo = () => {
   };
 
   const handelDeleteAllSelected = () => {
+    const randomIndex = Math.floor(Math.random() * deletemessages.length);
+    const randomMessage = deletemessages[randomIndex];
+    openSnackbar(randomMessage);
     setTodos((prevtodo) => {
       const updatedTodos = prevtodo.filter((todo) => !todo.checked);
-      openSnackbar("Selected todos deleted proud of u ❤️");
+
       return updatedTodos;
     });
   };
@@ -184,7 +187,7 @@ const Todo = () => {
           </Box>
           <Box
             sx={{
-              position: "fixed",
+              marginTop: "1.5rem",
               bottom: 10,
               left: 50,
               right: 0,
@@ -222,7 +225,6 @@ const Todo = () => {
           </Link>
           <Box
             sx={{
-              position: "fixed",
               bottom: 10,
               left: 50,
               right: 0,
