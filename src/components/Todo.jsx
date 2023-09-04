@@ -187,7 +187,7 @@ const Todo = () => {
           </Box>
           <Box
             sx={{
-              marginTop: "1.5rem",
+              marginTop: "5rem",
               bottom: 10,
               left: 50,
               right: 0,
