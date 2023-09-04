@@ -11,7 +11,7 @@ const AddTodoForm = ({ handelAddTodo }) => {
 
   const handelSubmit = (evt) => {
     evt.preventDefault();
-    if (text.length < 0) {
+    if (text.trim() !== "") {
       handelAddTodo(text);
       setText("");
     }
