@@ -36,7 +36,7 @@ const Todo = () => {
   const todayDate = getTodaysDate();
 
   const deletemessages = [
-    "hope u completed the task and not skip it u lazy ass",
+    "hope u completed the task and not skipped it u lazy ass",
     "hope u r not procrastinating u dumb human",
     "deleted it? really? u r that smart? unreal",
     "wowowow i cant believe u completed it",
@@ -44,12 +44,12 @@ const Todo = () => {
     "Is that task still playing hide and seek?",
   ];
   const addingmessages = [
-    "look at u adding task to you?",
-    "Make sure u complete them or i will tell u momma",
+    "look at u adding task",
+    "Make sure u complete them or i will tell ur momma",
     "adding task uff, which self help book made u do this?",
-    "taking life control back? lets see how long it last",
-    "u better finish this task not look at it everyday",
-    "your present self have to complete the task not yout future",
+    "taking life control back? lets see how long it lasts",
+    "u better finish this task & not just look at it everyday",
+    "your present self have to complete the task not your future",
   ];
   const openSnackbar = (message) => {
     setSnackbarMessage(message);
@@ -129,7 +129,7 @@ const Todo = () => {
               sx={{
                 width: "100%",
                 bgcolor: "background.paper",
-                border: "3px solid black",
+                border: "1px solid grey",
                 margin: "25px 0px 25px 0px",
               }}
             >
