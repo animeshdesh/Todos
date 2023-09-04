@@ -20,7 +20,7 @@ const AddTodoForm = ({ handelAddTodo }) => {
         <TextField
           sx={{ width: "100%" }}
           id="outlined-basic"
-          label="Add new Todo"
+          label="Type here"
           variant="outlined"
           value={text}
           onChange={handelTextChange}
