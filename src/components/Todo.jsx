@@ -23,7 +23,7 @@ const Todo = () => {
   const [snackbarOpen, setSnackbarOpen] = useState(false);
   const [name, setName] = useState(() => {
     const gettingName = localStorage.getItem("name");
-    if (!gettingName) return [];
+    if (!gettingName) return;
     return gettingName;
   });
   const [snackbarMessage, setSnackbarMessage] = useState("");
